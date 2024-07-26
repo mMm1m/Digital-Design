@@ -62,10 +62,26 @@ module or_gate(in1, in2, out);
         not_gate not1(mos,out);
 endmodule
 
+module xor_gate(in1, in2, out);
+	input wire in1, in2;
+        output wire out;
+
+        supply1 vdd;
+        supply0 gnd;
+	
+	wire out_1;
+	wire out_2;
+	wire out_3;
+	or_gate or1(in1,in2,out_1);
+	and_gate and1(in1,in2,out_2);
+	not_gate not1(out_2,out_3);
+	and_gate and2(out_1,out_3,out);
+endmodule
+
 module testbench();
         reg a,b;
         wire c;
-        or_gate g(a, b, c);
+        xor_gate g(a, b, c);
         initial begin
                 $dumpfile("./dump.vcd");
                 $dumpvars;
