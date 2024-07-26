@@ -1,5 +1,5 @@
 $date
-	Fri Jul 26 15:46:58 2024
+	Fri Jul 26 16:32:35 2024
 $end
 $version
 	Icarus Verilog
@@ -7,24 +7,19 @@ $end
 $timescale
 	1s
 $end
-$scope module testbench $end
+$scope module half_adder $end
 $var wire 1 ! c $end
-$var wire 1 " d $end
-$var reg 1 # a $end
-$var reg 1 $ b $end
-$scope module g $end
-$var wire 1 " c $end
-$var wire 1 % gnd $end
+$var wire 1 " gnd $end
 $var wire 1 # in1 $end
 $var wire 1 $ in2 $end
-$var wire 1 ! out $end
+$var wire 1 % out $end
 $var wire 1 & vdd $end
 $scope module andgate $end
 $var wire 1 ' gnd $end
 $var wire 1 # in1 $end
 $var wire 1 $ in2 $end
 $var wire 1 ( mos $end
-$var wire 1 ! out $end
+$var wire 1 % out $end
 $var wire 1 ) vdd $end
 $scope module nand1 $end
 $var wire 1 * gnd $end
@@ -37,7 +32,7 @@ $upscope $end
 $scope module not1 $end
 $var wire 1 - gnd $end
 $var wire 1 ( in $end
-$var wire 1 ! out $end
+$var wire 1 % out $end
 $var wire 1 . vdd $end
 $upscope $end
 $upscope $end
@@ -45,7 +40,7 @@ $scope module xorgate $end
 $var wire 1 / gnd $end
 $var wire 1 # in1 $end
 $var wire 1 $ in2 $end
-$var wire 1 " out $end
+$var wire 1 ! out $end
 $var wire 1 0 out_1 $end
 $var wire 1 1 out_2 $end
 $var wire 1 2 out_3 $end
@@ -77,7 +72,7 @@ $var wire 1 < gnd $end
 $var wire 1 0 in1 $end
 $var wire 1 2 in2 $end
 $var wire 1 = mos $end
-$var wire 1 " out $end
+$var wire 1 ! out $end
 $var wire 1 > vdd $end
 $scope module nand1 $end
 $var wire 1 ? gnd $end
@@ -90,7 +85,7 @@ $upscope $end
 $scope module not1 $end
 $var wire 1 B gnd $end
 $var wire 1 = in $end
-$var wire 1 " out $end
+$var wire 1 ! out $end
 $var wire 1 C vdd $end
 $upscope $end
 $upscope $end
@@ -124,82 +119,543 @@ $upscope $end
 $upscope $end
 $upscope $end
 $upscope $end
+$scope module testbench $end
+$var wire 1 N d $end
+$var wire 1 O e $end
+$var reg 1 P a $end
+$var reg 1 Q b $end
+$var reg 1 R c $end
+$scope module g $end
+$var wire 1 R cin $end
+$var wire 1 N cout $end
+$var wire 1 S gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 O out $end
+$var wire 1 T out_1 $end
+$var wire 1 U out_2 $end
+$var wire 1 V out_3 $end
+$var wire 1 W vdd $end
+$scope module andgate1 $end
+$var wire 1 X gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 Y mos $end
+$var wire 1 U out $end
+$var wire 1 Z vdd $end
+$scope module nand1 $end
+$var wire 1 [ gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 \ nmos_out $end
+$var wire 1 Y out $end
+$var wire 1 ] vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 ^ gnd $end
+$var wire 1 Y in $end
+$var wire 1 U out $end
+$var wire 1 _ vdd $end
+$upscope $end
+$upscope $end
+$scope module andgate2 $end
+$var wire 1 ` gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 a mos $end
+$var wire 1 V out $end
+$var wire 1 b vdd $end
+$scope module nand1 $end
+$var wire 1 c gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 d nmos_out $end
+$var wire 1 a out $end
+$var wire 1 e vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 f gnd $end
+$var wire 1 a in $end
+$var wire 1 V out $end
+$var wire 1 g vdd $end
+$upscope $end
+$upscope $end
+$scope module orgate1 $end
+$var wire 1 h gnd $end
+$var wire 1 V in1 $end
+$var wire 1 U in2 $end
+$var wire 1 i mos $end
+$var wire 1 N out $end
+$var wire 1 j vdd $end
+$scope module nand1 $end
+$var wire 1 k gnd $end
+$var wire 1 V in1 $end
+$var wire 1 U in2 $end
+$var wire 1 i out $end
+$var wire 1 l pmos_out $end
+$var wire 1 m vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 n gnd $end
+$var wire 1 i in $end
+$var wire 1 N out $end
+$var wire 1 o vdd $end
+$upscope $end
+$upscope $end
+$scope module xorgate1 $end
+$var wire 1 p gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 T out $end
+$var wire 1 q out_1 $end
+$var wire 1 r out_2 $end
+$var wire 1 s out_3 $end
+$var wire 1 t vdd $end
+$scope module and1 $end
+$var wire 1 u gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 v mos $end
+$var wire 1 r out $end
+$var wire 1 w vdd $end
+$scope module nand1 $end
+$var wire 1 x gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 y nmos_out $end
+$var wire 1 v out $end
+$var wire 1 z vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 { gnd $end
+$var wire 1 v in $end
+$var wire 1 r out $end
+$var wire 1 | vdd $end
+$upscope $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 } gnd $end
+$var wire 1 q in1 $end
+$var wire 1 s in2 $end
+$var wire 1 ~ mos $end
+$var wire 1 T out $end
+$var wire 1 !" vdd $end
+$scope module nand1 $end
+$var wire 1 "" gnd $end
+$var wire 1 q in1 $end
+$var wire 1 s in2 $end
+$var wire 1 #" nmos_out $end
+$var wire 1 ~ out $end
+$var wire 1 $" vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 %" gnd $end
+$var wire 1 ~ in $end
+$var wire 1 T out $end
+$var wire 1 &" vdd $end
+$upscope $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 '" gnd $end
+$var wire 1 r in $end
+$var wire 1 s out $end
+$var wire 1 (" vdd $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 )" gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 *" mos $end
+$var wire 1 q out $end
+$var wire 1 +" vdd $end
+$scope module nand1 $end
+$var wire 1 ," gnd $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 *" out $end
+$var wire 1 -" pmos_out $end
+$var wire 1 ." vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 /" gnd $end
+$var wire 1 *" in $end
+$var wire 1 q out $end
+$var wire 1 0" vdd $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module xorgate2 $end
+$var wire 1 1" gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 O out $end
+$var wire 1 2" out_1 $end
+$var wire 1 3" out_2 $end
+$var wire 1 4" out_3 $end
+$var wire 1 5" vdd $end
+$scope module and1 $end
+$var wire 1 6" gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 7" mos $end
+$var wire 1 3" out $end
+$var wire 1 8" vdd $end
+$scope module nand1 $end
+$var wire 1 9" gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 :" nmos_out $end
+$var wire 1 7" out $end
+$var wire 1 ;" vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 <" gnd $end
+$var wire 1 7" in $end
+$var wire 1 3" out $end
+$var wire 1 =" vdd $end
+$upscope $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 >" gnd $end
+$var wire 1 2" in1 $end
+$var wire 1 4" in2 $end
+$var wire 1 ?" mos $end
+$var wire 1 O out $end
+$var wire 1 @" vdd $end
+$scope module nand1 $end
+$var wire 1 A" gnd $end
+$var wire 1 2" in1 $end
+$var wire 1 4" in2 $end
+$var wire 1 B" nmos_out $end
+$var wire 1 ?" out $end
+$var wire 1 C" vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 D" gnd $end
+$var wire 1 ?" in $end
+$var wire 1 O out $end
+$var wire 1 E" vdd $end
+$upscope $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 F" gnd $end
+$var wire 1 3" in $end
+$var wire 1 4" out $end
+$var wire 1 G" vdd $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 H" gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 I" mos $end
+$var wire 1 2" out $end
+$var wire 1 J" vdd $end
+$scope module nand1 $end
+$var wire 1 K" gnd $end
+$var wire 1 T in1 $end
+$var wire 1 R in2 $end
+$var wire 1 I" out $end
+$var wire 1 L" pmos_out $end
+$var wire 1 M" vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 N" gnd $end
+$var wire 1 I" in $end
+$var wire 1 2" out $end
+$var wire 1 O" vdd $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+1O"
+0N"
+1M"
+1L"
+0K"
+1J"
+1I"
+0H"
+1G"
+0F"
+1E"
+0D"
+1C"
+0B"
+0A"
+1@"
+1?"
+0>"
+1="
+0<"
+1;"
+z:"
+09"
+18"
+17"
+06"
+15"
+14"
+03"
+02"
+01"
+10"
+0/"
+1."
+1-"
+0,"
+1+"
+1*"
+0)"
+1("
+0'"
+1&"
+0%"
+1$"
+0#"
+0""
+1!"
+1~
+0}
+1|
+0{
+1z
+zy
+0x
+1w
+1v
+0u
+1t
+1s
+0r
+0q
+0p
+1o
+0n
+1m
+1l
+0k
+1j
+1i
+0h
+1g
+0f
+1e
+zd
+0c
+1b
+1a
+0`
+1_
+0^
+1]
+z\
+0[
+1Z
+1Y
+0X
+1W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
 1M
 0L
 1K
-1J
+xJ
 0I
 1H
-1G
+xG
 0F
 1E
 0D
 1C
 0B
 1A
-0@
+x@
 0?
 1>
-1=
+x=
 0<
 1;
 0:
 19
-z8
+x8
 07
 16
-15
+x5
 04
 13
-12
-01
-00
+x2
+x1
+x0
 0/
 1.
 0-
 1,
-z+
+x+
 0*
 1)
-1(
+x(
 0'
 1&
-0%
-0$
-0#
+x%
+z$
+z#
 0"
-0!
+x!
 $end
 #1
-zJ
-1"
-0=
-10
-0G
-1#
+0d
+0:"
+1O
+0?"
+12"
+0I"
+1R
 #2
-0+
-08
-1$
-1J
-1"
-0=
-10
-0G
-0#
+zd
+z:"
+0R
+0\
+0y
+1l
+0N
+1i
+0V
+1a
+1O
+0?"
+0B"
+14"
+03"
+17"
+zL"
+1T
+0~
+1q
+0*"
+1Q
 #3
-1!
-0(
-0"
-1=
-z@
-02
-11
-05
-zJ
-1#
+z\
+zy
+0Q
+0N
+1i
+0U
+1Y
+zL"
+1O
+0?"
+12"
+0I"
+1T
+0~
+0#"
+1s
+0r
+1v
+z-"
+1P
 #4
+1N
+0i
+1U
+0Y
+0\
+1L"
+0O
+1?"
+02"
+1I"
+0T
+1~
+z#"
+0s
+1r
+0v
+0y
+1Q
+#5
+zl
+1V
+0a
+0d
+zB"
+04"
+13"
+07"
+0:"
+1R
+1N
+0i
+0U
+1Y
+z\
+zL"
+0O
+1?"
+12"
+0I"
+1T
+0~
+0#"
+1s
+0r
+1v
+zy
+0Q
+#6
+0\
+0y
+1Q
+1-"
+zl
+1N
+0i
+1V
+0a
+0O
+1?"
+zB"
+04"
+13"
+07"
+zL"
+1T
+0~
+1q
+0*"
+0P
+#7
+1U
+0Y
+1l
+1N
+0i
+0V
+1a
+1O
+0?"
+0B"
+14"
+03"
+17"
+1L"
+0T
+1~
+z#"
+0s
+1r
+0v
+z-"
+1P
+#8

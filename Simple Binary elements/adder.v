@@ -88,10 +88,26 @@ module half_adder(in1, in2, out, c);
 	xor_gate xorgate(in1,in2,c);
 endmodule
 
+module adder(in1, in2, cin, cout, out);
+	input wire in1, in2, cin;
+        output wire cout, out;
+
+        supply1 vdd;
+        supply0 gnd;
+	wire out_1;
+	wire out_2;
+	wire out_3;
+	xor_gate xorgate1(in1,in2,out_1);
+	and_gate andgate1(in1,in2,out_2);
+	xor_gate xorgate2(out_1,cin,out);
+	and_gate andgate2(out_1,cin,out_3);
+	or_gate orgate1(out_3,out_2,cout);
+endmodule
+
 module testbench();
-        reg a,b;
-	wire c,d;
-        half_adder g(a, b, c,d);
+        reg a,b,c;
+	wire d,e;
+        adder g(a, b, c,d,e);
         initial begin
                 $dumpfile("./dump.vcd");
                 $dumpvars;
@@ -99,19 +115,54 @@ module testbench();
         initial begin
                 a = 0;
 		b = 0;
+		c = 0;
                 #1;
-                $display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
-                a = 1;
-		b = 0;
+                $display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+		a = 0;
+                b = 0;
+                c = 1;
                 #1;
-		$display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
 		a = 0;
                 b = 1;
+                c = 0;
                 #1;
-		$display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
-                a = 1;
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+
+		a = 1;
+                b = 0;
+                c = 0;
+                #1;
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+		a = 1;
                 b = 1;
+                c = 0;
                 #1;
-                $display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+
+		a = 1;
+                b = 0;
+                c = 1;
+                #1;
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+		a = 0;
+                b = 1;
+                c = 1;
+                #1;
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+		a = 1;
+                b = 1;
+                c = 1;
+                #1;
+		$display("a = %b , b = %b, c = %b => out = %b, cout = %d", a, b, c,d,e);
+
+
         end
 endmodule
