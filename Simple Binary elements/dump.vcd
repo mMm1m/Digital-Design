@@ -1,5 +1,5 @@
 $date
-	Fri Jul 26 14:06:31 2024
+	Fri Jul 26 15:16:57 2024
 $end
 $version
 	Icarus Verilog
@@ -7,25 +7,93 @@ $end
 $timescale
 	1s
 $end
+$scope module and_gate $end
+$var wire 1 ! gnd $end
+$var wire 1 " in1 $end
+$var wire 1 # in2 $end
+$var wire 1 $ mos $end
+$var wire 1 % out $end
+$var wire 1 & vdd $end
+$scope module nand1 $end
+$var wire 1 ' gnd $end
+$var wire 1 " in1 $end
+$var wire 1 # in2 $end
+$var wire 1 ( nmos_out $end
+$var wire 1 $ out $end
+$var wire 1 ) vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 * gnd $end
+$var wire 1 $ in $end
+$var wire 1 % out $end
+$var wire 1 + vdd $end
+$upscope $end
+$upscope $end
 $scope module testbench $end
-$var wire 1 ! b $end
-$var reg 1 " a $end
+$var wire 1 , c $end
+$var reg 1 - a $end
+$var reg 1 . b $end
 $scope module g $end
-$var wire 1 # gnd $end
-$var wire 1 " in $end
-$var wire 1 ! out $end
-$var wire 1 $ vdd $end
+$var wire 1 / gnd $end
+$var wire 1 - in1 $end
+$var wire 1 . in2 $end
+$var wire 1 0 mos $end
+$var wire 1 , out $end
+$var wire 1 1 vdd $end
+$scope module nand1 $end
+$var wire 1 2 gnd $end
+$var wire 1 - in1 $end
+$var wire 1 . in2 $end
+$var wire 1 0 out $end
+$var wire 1 3 pmos_out $end
+$var wire 1 4 vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 5 gnd $end
+$var wire 1 0 in $end
+$var wire 1 , out $end
+$var wire 1 6 vdd $end
+$upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1$
-0#
-0"
-1!
+16
+05
+14
+13
+02
+11
+10
+0/
+0.
+0-
+0,
+1+
+0*
+1)
+x(
+0'
+1&
+x%
+x$
+z#
+z"
+0!
 $end
 #1
-0!
-1"
+z3
+1,
+00
+1-
 #2
+1.
+13
+1,
+00
+0-
+#3
+z3
+1-
+#4
