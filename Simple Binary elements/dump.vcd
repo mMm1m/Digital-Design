@@ -1,5 +1,5 @@
 $date
-	Fri Jul 26 15:35:26 2024
+	Fri Jul 26 15:46:58 2024
 $end
 $version
 	Icarus Verilog
@@ -9,87 +9,118 @@ $timescale
 $end
 $scope module testbench $end
 $var wire 1 ! c $end
-$var reg 1 " a $end
-$var reg 1 # b $end
+$var wire 1 " d $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
 $scope module g $end
-$var wire 1 $ gnd $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
+$var wire 1 " c $end
+$var wire 1 % gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
 $var wire 1 ! out $end
-$var wire 1 % out_1 $end
-$var wire 1 & out_2 $end
-$var wire 1 ' out_3 $end
-$var wire 1 ( vdd $end
-$scope module and1 $end
-$var wire 1 ) gnd $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
-$var wire 1 * mos $end
-$var wire 1 & out $end
-$var wire 1 + vdd $end
+$var wire 1 & vdd $end
+$scope module andgate $end
+$var wire 1 ' gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 ( mos $end
+$var wire 1 ! out $end
+$var wire 1 ) vdd $end
 $scope module nand1 $end
-$var wire 1 , gnd $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
-$var wire 1 - nmos_out $end
-$var wire 1 * out $end
-$var wire 1 . vdd $end
+$var wire 1 * gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 + nmos_out $end
+$var wire 1 ( out $end
+$var wire 1 , vdd $end
 $upscope $end
 $scope module not1 $end
+$var wire 1 - gnd $end
+$var wire 1 ( in $end
+$var wire 1 ! out $end
+$var wire 1 . vdd $end
+$upscope $end
+$upscope $end
+$scope module xorgate $end
 $var wire 1 / gnd $end
-$var wire 1 * in $end
-$var wire 1 & out $end
-$var wire 1 0 vdd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 " out $end
+$var wire 1 0 out_1 $end
+$var wire 1 1 out_2 $end
+$var wire 1 2 out_3 $end
+$var wire 1 3 vdd $end
+$scope module and1 $end
+$var wire 1 4 gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 5 mos $end
+$var wire 1 1 out $end
+$var wire 1 6 vdd $end
+$scope module nand1 $end
+$var wire 1 7 gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 8 nmos_out $end
+$var wire 1 5 out $end
+$var wire 1 9 vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 : gnd $end
+$var wire 1 5 in $end
+$var wire 1 1 out $end
+$var wire 1 ; vdd $end
 $upscope $end
 $upscope $end
 $scope module and2 $end
-$var wire 1 1 gnd $end
-$var wire 1 % in1 $end
-$var wire 1 ' in2 $end
-$var wire 1 2 mos $end
-$var wire 1 ! out $end
-$var wire 1 3 vdd $end
+$var wire 1 < gnd $end
+$var wire 1 0 in1 $end
+$var wire 1 2 in2 $end
+$var wire 1 = mos $end
+$var wire 1 " out $end
+$var wire 1 > vdd $end
 $scope module nand1 $end
-$var wire 1 4 gnd $end
-$var wire 1 % in1 $end
-$var wire 1 ' in2 $end
-$var wire 1 5 nmos_out $end
+$var wire 1 ? gnd $end
+$var wire 1 0 in1 $end
+$var wire 1 2 in2 $end
+$var wire 1 @ nmos_out $end
+$var wire 1 = out $end
+$var wire 1 A vdd $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 B gnd $end
+$var wire 1 = in $end
+$var wire 1 " out $end
+$var wire 1 C vdd $end
+$upscope $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 D gnd $end
+$var wire 1 1 in $end
 $var wire 1 2 out $end
-$var wire 1 6 vdd $end
-$upscope $end
-$scope module not1 $end
-$var wire 1 7 gnd $end
-$var wire 1 2 in $end
-$var wire 1 ! out $end
-$var wire 1 8 vdd $end
-$upscope $end
-$upscope $end
-$scope module not1 $end
-$var wire 1 9 gnd $end
-$var wire 1 & in $end
-$var wire 1 ' out $end
-$var wire 1 : vdd $end
+$var wire 1 E vdd $end
 $upscope $end
 $scope module or1 $end
-$var wire 1 ; gnd $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
-$var wire 1 < mos $end
-$var wire 1 % out $end
-$var wire 1 = vdd $end
+$var wire 1 F gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 G mos $end
+$var wire 1 0 out $end
+$var wire 1 H vdd $end
 $scope module nand1 $end
-$var wire 1 > gnd $end
-$var wire 1 " in1 $end
-$var wire 1 # in2 $end
-$var wire 1 < out $end
-$var wire 1 ? pmos_out $end
-$var wire 1 @ vdd $end
+$var wire 1 I gnd $end
+$var wire 1 # in1 $end
+$var wire 1 $ in2 $end
+$var wire 1 G out $end
+$var wire 1 J pmos_out $end
+$var wire 1 K vdd $end
 $upscope $end
 $scope module not1 $end
-$var wire 1 A gnd $end
-$var wire 1 < in $end
-$var wire 1 % out $end
-$var wire 1 B vdd $end
+$var wire 1 L gnd $end
+$var wire 1 G in $end
+$var wire 1 0 out $end
+$var wire 1 M vdd $end
+$upscope $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -97,35 +128,46 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1B
-0A
-1@
-1?
-0>
+1M
+0L
+1K
+1J
+0I
+1H
+1G
+0F
+1E
+0D
+1C
+0B
+1A
+0@
+0?
+1>
 1=
-1<
-0;
-1:
-09
-18
+0<
+1;
+0:
+19
+z8
 07
 16
-05
+15
 04
 13
 12
 01
-10
+00
 0/
 1.
-z-
-0,
-1+
-1*
-0)
+0-
+1,
+z+
+0*
+1)
 1(
-1'
-0&
+0'
+1&
 0%
 0$
 0#
@@ -133,28 +175,31 @@ z-
 0!
 $end
 #1
-z?
-1!
-02
-1%
-0<
+zJ
 1"
-#2
-0-
+0=
+10
+0G
 1#
-1?
-1!
-02
-1%
-0<
-0"
-#3
-0!
-12
-z5
-0'
-1&
-0*
-z?
+#2
+0+
+08
+1$
+1J
 1"
+0=
+10
+0G
+0#
+#3
+1!
+0(
+0"
+1=
+z@
+02
+11
+05
+zJ
+1#
 #4

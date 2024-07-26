@@ -78,10 +78,20 @@ module xor_gate(in1, in2, out);
 	and_gate and2(out_1,out_3,out);
 endmodule
 
+module half_adder(in1, in2, out, c);
+	input wire in1, in2;
+        output wire out, c;
+
+        supply1 vdd;
+        supply0 gnd;
+	and_gate andgate(in1,in2,out);
+	xor_gate xorgate(in1,in2,c);
+endmodule
+
 module testbench();
         reg a,b;
-        wire c;
-        xor_gate g(a, b, c);
+	wire c,d;
+        half_adder g(a, b, c,d);
         initial begin
                 $dumpfile("./dump.vcd");
                 $dumpvars;
@@ -90,18 +100,18 @@ module testbench();
                 a = 0;
 		b = 0;
                 #1;
-                $display("a = %b , b = %b => c = %b", a, b, c);
+                $display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
                 a = 1;
 		b = 0;
                 #1;
-                $display("a = %b , b = %b => c = %b", a, b, c);
+		$display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
 		a = 0;
                 b = 1;
                 #1;
-                $display("a = %b , b = %b => c = %b", a, b, c);
+		$display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
                 a = 1;
                 b = 1;
                 #1;
-                $display("a = %b , b = %b => c = %b", a, b, c);
+                $display("a = %b , b = %b => out = %b, c = %d", a, b, c,d);
         end
 endmodule
